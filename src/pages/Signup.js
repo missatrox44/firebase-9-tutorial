@@ -1,14 +1,17 @@
-import { useState } from 'react'
+import { useState } from "react";
+import { useSignup } from "../hooks/useSignup";
 
 export default function Signup() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { error, signup } = useSignup()
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(email, password)
-  }
-  
+    e.preventDefault();
+    // console.log(email, password);
+    signup(email, password)
+  };
+
   //similar to login component
   //track email/password
   //handle submit form
@@ -35,7 +38,9 @@ export default function Signup() {
           />
         </label>
         <button>sign up</button>
+        {/* will only render IF there is an error */}
+        {error && <p>{error}</p>}
       </form>
     </div>
-  )
+  );
 }
