@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useAuthContext } from '../hooks/useAuthContext'
 
 import { db } from '../firebase/config'
 import { collection, addDoc } from 'firebase/firestore'
@@ -6,12 +7,15 @@ export default function BookForm() {
   //keep track of what user is typing in
   const [newBook, setNewBook] = useState('')
 
+  const {user} = useAuthContext()
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     // console.log(newBook)
 
     await addDoc(collection(db, 'books'), {
-      title: newBook
+      title: newBook,
+      uid: user.uid
     })
 
     setNewBook('')
