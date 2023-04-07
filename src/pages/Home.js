@@ -6,7 +6,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 export default function Home() {
   const { user } = useAuthContext();
   //only fetch books of currently logged in user
-  const { documents: books } = useCollection("books", ["uid", "===", user.uid]);
+  const { documents: books } = useCollection("books", ["uid", "==", user.uid]);
 
   return (
     <div>
