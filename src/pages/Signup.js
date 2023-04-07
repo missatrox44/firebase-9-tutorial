@@ -14,7 +14,7 @@ export default function Signup() {
 
   //similar to login component
   //track email/password
-  //handle submit form
+  //handle submit form 
   return (
     <div>
       <h2>Signup</h2>
