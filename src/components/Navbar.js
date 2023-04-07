@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+//create three links to three different routes
+//logout - firebase auth functionality
 export default function Navbar() {
   return (
     <nav>

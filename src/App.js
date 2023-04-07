@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 
+//root component set up with different routes
+//3 pages: home, signup, login
 function App() {
   return (
     <div className="App">

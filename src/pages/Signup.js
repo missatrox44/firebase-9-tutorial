@@ -9,6 +9,9 @@ export default function Signup() {
     console.log(email, password)
   }
   
+  //similar to login component
+  //track email/password
+  //handle submit form
   return (
     <div>
       <h2>Signup</h2>

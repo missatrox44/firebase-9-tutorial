@@ -4,6 +4,10 @@ export default function BookList({ books }) {
     console.log(id)
   }
 
+  //take in books prop, map through books
+  //output li tag for each book, key is book.id 
+  //output book title inside book title
+  //handleClick is asynchronous function 
   return (
     <div className="book-list">
       <ul>
@@ -14,3 +18,5 @@ export default function BookList({ books }) {
     </div>
   )
 }
+
+//

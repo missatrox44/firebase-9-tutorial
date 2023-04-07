@@ -9,6 +9,9 @@ export default function Login() {
     console.log(email, password)
   }
   
+  //two inputs: email, password
+  //both hooked up to state - empty initially
+  //submit handler on form
   return (
     <div>
       <h2>Login</h2>
